@@ -7,6 +7,22 @@ import attendanceReport from "@/assets/portfolio-attendance-report.png";
 const Portfolio = () => {
   const projects = [
     {
+      title: "Operational Dashboard - Interpreter Bookings",
+      description:
+        "Comprehensive Power BI dashboard for high-volume interpreter bookings. Real-time Fill Rate trends, No-Show insights, TAT monitoring, and Conversion Rate tracking with automated SQL Server integration.",
+      image: "/case-studies/operational-dashboard.jpg",
+      tags: ["Power BI", "SQL Server", "Operations", "Real-time Analytics"],
+      link: "#case-studies",
+    },
+    {
+      title: "Monthly Campaign Performance Report",
+      description:
+        "Interactive multi-channel marketing analytics tracking Paid Search, Social Media, Email Marketing, and Display Ads performance with comprehensive KPIs and ROI analysis.",
+      image: "/case-studies/campaign-performance.jpg",
+      tags: ["Marketing Analytics", "Multi-Channel", "Performance Tracking"],
+      link: "/case-studies/campaign-performance-report.html",
+    },
+    {
       title: "Employee Performance Dashboard",
       description:
         "Comprehensive KPI tracking system with collaboration, communication, and dependability metrics. Real-time performance monitoring and feedback analysis.",
@@ -53,39 +69,48 @@ const Portfolio = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <Card
-              key={index}
-              className="group overflow-hidden hover:shadow-2xl transition-all duration-500 border-border/50"
-            >
-              <div className="relative overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-64 object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-              <CardContent className="p-8 space-y-4">
-                <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {project.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary border border-primary/20"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+          {projects.map((project, index) => {
+            const CardWrapper = project.link ? 'a' : 'div';
+            const cardProps = project.link
+              ? { href: project.link, ...(project.link.startsWith('http') ? { target: "_blank", rel: "noopener noreferrer" } : {}) }
+              : {};
+
+            return (
+              <Card
+                key={index}
+                className="group overflow-hidden hover:shadow-2xl transition-all duration-500 border-border/50"
+              >
+                <CardWrapper {...cardProps} className={project.link ? "block" : ""}>
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-64 object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                  <CardContent className="p-8 space-y-4">
+                    <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 pt-2">
+                      {project.tags.map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary border border-primary/20"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </CardContent>
+                </CardWrapper>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>

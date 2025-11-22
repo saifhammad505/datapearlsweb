@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail, Phone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import ConsultationDialog from "./ConsultationDialog";
 
 const CTA = () => {
   return (
@@ -18,29 +19,15 @@ const CTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
-            <Button size="lg" className="text-lg px-8 group">
-              Schedule a Consultation
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <ConsultationDialog>
+              <Button size="lg" className="text-lg px-8 group">
+                Schedule a Consultation
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </ConsultationDialog>
+            <Button size="lg" variant="outline" className="text-lg px-8" asChild>
+              <a href="#services">View Our Services</a>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8">
-              View Our Services
-            </Button>
-          </div>
-
-          {/* Contact Info */}
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center pt-12 text-muted-foreground">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                <Mail className="w-5 h-5 text-primary" />
-              </div>
-              <span>contact@datapearls.com</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                <Phone className="w-5 h-5 text-primary" />
-              </div>
-              <span>+1 (555) 123-4567</span>
-            </div>
           </div>
         </div>
       </div>

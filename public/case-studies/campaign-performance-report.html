@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Campaign Performance Report - August 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header .period {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-left: 6px solid;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .paid-search {
+            border-left-color: #e74c3c;
+        }
+        
+        .social-media {
+            border-left-color: #f39c12;
+        }
+        
+        .email-marketing {
+            border-left-color: #27ae60;
+        }
+        
+        .display-ads {
+            border-left-color: #8e44ad;
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .service-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .paid-search .service-icon {
+            background: #e74c3c;
+        }
+        
+        .social-media .service-icon {
+            background: #f39c12;
+        }
+        
+        .email-marketing .service-icon {
+            background: #27ae60;
+        }
+        
+        .display-ads .service-icon {
+            background: #8e44ad;
+        }
+        
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .kpi-item {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .kpi-item:hover {
+            border-color: #667eea;
+            background: #fff;
+        }
+        
+        .kpi-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .kpi-label {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        
+        .target-met {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .target-missed {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .target-exceeded {
+            background: #cce5ff;
+            color: #004085;
+        }
+        
+        .insights {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .insights h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .insights ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .insights li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .insights li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .insights li:last-child {
+            border-bottom: none;
+        }
+        
+        .performance-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin: 20px 0;
+        }
+        
+        .performance-table th {
+            background: #667eea;
+            color: white;
+            padding: 15px 10px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .performance-table td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+        
+        .performance-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .risk-section {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .recommendations-section {
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .metric-highlight {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .summary-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-top: 4px solid #667eea;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .service-card, .summary-card {
+                break-inside: avoid;
+                margin-bottom: 20px;
+            }
+            .container {
+                max-width: none;
+                padding: 0;
+            }
+        }
+        
+        .data-source {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .data-source-insight {
+            font-style: italic;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>📊 Monthly Campaign Performance Report</h1>
+            <div class="period">Digital Marketing Agency | August 2025</div>
+        </div>
+
+        <!-- Service Performance Grid -->
+        <div class="service-grid">
+            <!-- Paid Search Performance -->
+            <div class="service-card paid-search">
+                <div class="service-title">
+                    <div class="service-icon">🔍</div>
+                    Paid Search (Google Ads)
+                </div>
+                
+                <div class="kpi-grid">
+                    <div class="kpi-item">
+                        <div class="kpi-value">4.2%</div>
+                        <div class="kpi-label">CTR</div>
+                        <span class="status-indicator target-exceeded">+0.7pp</span>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-value">$2.85</div>
+                        <div class="kpi-label">CPC</div>
+                        <span class="status-indicator target-met">On Target</span>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-value">12.8%</div>
+                        <div class="kpi-label">Conversion Rate</div>
+                        <span class="status-indicator target-exceeded">+2.8pp</span>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-value">$85,420</div>
+                        <div class="kpi-label">Ad Spend</div>
+                    </div>
+                </div>
+
+                <div class="insights">
+                    <h3>Key Insights</h3>
+                    <p class="data-source-insight">Source: Google Ads Performance Report - Aug2025.xlsx</p>
+                    <ul>
+                        <li>CTR exceeding industry benchmark of 3.5%</li>
+                        <li>Strong conversion rate performance in B2B campaigns</li>
+                        <li>Healthcare vertical driving 35% of conversions</li>
+                        <li>Mobile performance improved by 18% MoM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Media Performance -->
+            <div class="service-card social-media">
+                <div class="service-title">
+                    <div class="service-icon">📱</div>
+                    Social Media Advertising
+                </div>
+                
+                <div class="kpi-grid">
+                    <div class="kpi-item">
+                        <div class="kpi-value">2.8%</div>
+                        <div class="kpi-label">Engagement Rate</div>
+                        <span class="status-indicator target-missed">-0.2pp</span>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-value">$1.45</div>
+                        <div class="kpi-label">CPM</div>
+                        <span class="status-indicator target-exceeded">-$0.35</span>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-value">8.5%</div>
+                        <div class="kpi-label">Conversion Rate</div>
+                        <span class="status-indicator target-met">Target</span>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-value">$42,300</div>
+                        <div class="kpi-label">Ad Spend</div>
+                    </div>
+                </div>
+
+                <div class="insights">
+                    <h3>Key Insights</h3>
+                    <p class="data-source-insight">Source: Social Media Analytics Dashboard - Aug2025.pdf</p>
+                    <ul>
+                        <li>LinkedIn performing best for B2B lead generation</li>
+                        <li>Facebook video ads showing 25% higher engagement</li>
+                        <li>Instagram Stories driving younger demographic (25-34)</li>
+                        <li>Need to optimize audience targeting on Twitter</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Email Marketing Performance -->
+            <div class="service-card email-marketing">
+                <div class="service-title">
+                    <div class="service-icon">📧</div>
+                    Email Marketing Campaigns
+                </div>
+                
+                <div class="kpi-grid">
+                    <div class="kpi-item">
+                        <div class="kpi-value">28.5%</div>
+                        <div class="kpi-label">Open Rate</div>
+                        <span class="status-indicator target-exceeded">+3.5pp</span>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-value">4.2%</div>
+                        <div class="kpi-label">Click Rate</div>
+                        <span class="status-indicator target-met">Target</span>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-value">0.8%</div>
+                        <div class="kpi-label">Unsubscribe Rate</div>
+                        <span class="status-indicator target-met">Good</span>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-value">185K</div>
+                        <div class="kpi-label">Emails Sent</div>
+                    </div>
+                </div>
+
+                <div class="insights">
+                    <h3>Key Insights</h3>
+                    <p class="data-source-insight">Source: MailChimp Campaign Reports - Aug2025.csv</p>
+                    <ul>
+                        <li>Personalized subject lines improving open rates by 22%</li>
+                        <li>Tuesday 10AM best send time across segments</li>
+                        <li>Newsletter format outperforming promotional emails</li>
+                        <li>Mobile optimization driving 65% of opens</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Display Advertising Performance -->
+            <div class="service-card display-ads">
+                <div class="service-title">
+                    <div class="service-icon">🖼️</div>
+                    Display &amp; Programmatic
+                </div>
+                
+                <div class="kpi-grid">
+                    <div class="kpi-item">
+                        <div class="kpi-value">0.85%</div>
+                        <div class="kpi-label">CTR</div>
+                        <span class="status-indicator target-missed">-0.15pp</span>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-value">$3.20</div>
+                        <div class="kpi-label">CPM</div>
+                        <span class="status-indicator target-met">Target</span>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-value">2.1%</div>
+                        <div class="kpi-label">Conversion Rate</div>
+                        <span class="status-indicator target-missed">-0.4pp</span>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-value">$28,750</div>
+                        <div class="kpi-label">Ad Spend</div>
+                    </div>
+                </div>
+
+                <div class="insights">
+                    <h3>Key Insights</h3>
+                    <p class="data-source-insight">Source: DSP Performance Analytics - Aug2025.json</p>
+                    <ul>
+                        <li>Premium placements showing 40% higher viewability</li>
+                        <li>Rich media formats outperforming static banners</li>
+                        <li>Retargeting campaigns delivering 3x conversion rate</li>
+                        <li>Need creative refresh for banner fatigue</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Campaign Performance by Client Vertical -->
+        <div class="summary-card">
+            <h2 class="section-title">🏢 Performance by Client Vertical</h2>
+            <p class="data-source"><strong>Data Source:</strong> Client Performance Dashboard - Campaign_Analytics_Aug2025.xlsx</p>
+            <table class="performance-table">
+                <thead>
+                    <tr>
+                        <th>Industry Vertical</th>
+                        <th>Ad Spend</th>
+                        <th>Conversions</th>
+                        <th>Conversion Rate</th>
+                        <th>CPA</th>
+                        <th>ROAS</th>
+                        <th>Performance Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Healthcare</strong></td>
+                        <td>$45,200</td>
+                        <td>1,247</td>
+                        <td>14.2%</td>
+                        <td>$36.25</td>
+                        <td>4.8x</td>
+                        <td><span class="status-indicator target-exceeded">Excellent</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>E-commerce</strong></td>
+                        <td>$38,900</td>
+                        <td>892</td>
+                        <td>11.8%</td>
+                        <td>$43.60</td>
+                        <td>3.2x</td>
+                        <td><span class="status-indicator target-met">Good</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Financial Services</strong></td>
+                        <td>$52,100</td>
+                        <td>658</td>
+                        <td>8.9%</td>
+                        <td>$79.15</td>
+                        <td>2.1x</td>
+                        <td><span class="status-indicator target-met">Meets Target</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Technology</strong></td>
+                        <td>$31,850</td>
+                        <td>445</td>
+                        <td>9.2%</td>
+                        <td>$71.57</td>
+                        <td>2.8x</td>
+                        <td><span class="status-indicator target-met">Good</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Real Estate</strong></td>
+                        <td>$18,420</td>
+                        <td>156</td>
+                        <td>5.8%</td>
+                        <td>$118.08</td>
+                        <td>1.4x</td>
+                        <td><span class="status-indicator target-missed">Needs Focus</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Top Performing Campaigns -->
+        <div class="summary-card">
+            <h2 class="section-title">🏆 Top Performing Campaigns</h2>
+            <p class="data-source"><strong>Data Source:</strong> Campaign_Performance_Rankings_Aug2025.csv</p>
+            <table class="performance-table">
+                <thead>
+                    <tr>
+                        <th>Campaign Name</th>
+                        <th>Channel</th>
+                        <th>Impressions</th>
+                        <th>Conversions</th>
+                        <th>CPA</th>
+                        <th>ROAS</th>
+                        <th>Account Manager</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>MedDevice_Search_Q3</strong></td>
+                        <td>Google Ads</td>
+                        <td>285,430</td>
+                        <td>412</td>
+                        <td>$28.50</td>
+                        <td>6.2x</td>
+                        <td>Sarah Chen</td>
+                    </tr>
+                    <tr>
+                        <td><strong>EcomFashion_Display_Retarget</strong></td>
+                        <td>Programmatic</td>
+                        <td>1,240,580</td>
+                        <td>298</td>
+                        <td>$35.80</td>
+                        <td>4.1x</td>
+                        <td>Marcus Rodriguez</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FinTech_LinkedIn_LeadGen</strong></td>
+                        <td>LinkedIn Ads</td>
+                        <td>156,200</td>
+                        <td>187</td>
+                        <td>$95.40</td>
+                        <td>3.8x</td>
+                        <td>Emma Thompson</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Healthcare_Email_Nurture</strong></td>
+                        <td>Email Marketing</td>
+                        <td>45,800</td>
+                        <td>156</td>
+                        <td>$18.25</td>
+                        <td>5.9x</td>
+                        <td>David Kim</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Account Manager Performance -->
+        <div class="summary-card">
+            <h2 class="section-title">👨‍💼 Account Manager Performance</h2>
+            <p class="data-source"><strong>Data Source:</strong> AM_Performance_Scorecard_Aug2025.xlsx</p>
+            <table class="performance-table">
+                <thead>
+                    <tr>
+                        <th>Account Manager</th>
+                        <th>Accounts Managed</th>
+                        <th>Total Ad Spend</th>
+                        <th>Avg ROAS</th>
+                        <th>Client Satisfaction</th>
+                        <th>Performance Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Sarah Chen</strong></td>
+                        <td>8</td>
+                        <td>$68,450</td>
+                        <td>4.2x</td>
+                        <td>9.1/10</td>
+                        <td><span class="status-indicator target-exceeded">Outstanding</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Marcus Rodriguez</strong></td>
+                        <td>12</td>
+                        <td>$89,230</td>
+                        <td>3.8x</td>
+                        <td>8.7/10</td>
+                        <td><span class="status-indicator target-exceeded">Excellent</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Emma Thompson</strong></td>
+                        <td>6</td>
+                        <td>$45,180</td>
+                        <td>3.5x</td>
+                        <td>8.9/10</td>
+                        <td><span class="status-indicator target-met">Strong</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>David Kim</strong></td>
+                        <td>9</td>
+                        <td>$53,610</td>
+                        <td>3.2x</td>
+                        <td>8.4/10</td>
+                        <td><span class="status-indicator target-met">Good</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Risk Analysis -->
+        <div class="risk-section">
+            <h2 class="section-title">⚠️ Risk Analysis &amp; Challenges</h2>
+            <div class="section-content">
+                <div>
+                    <h3>Performance Risks</h3>
+                    <ul>
+                        <li>Display advertising CTR declining (-0.15pp vs target)</li>
+                        <li>Real Estate vertical underperforming (1.4x ROAS vs 2.5x target)</li>
+                        <li>Social media engagement rate below target on Twitter</li>
+                        <li>Rising CPCs in competitive healthcare keywords</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Market Challenges</h3>
+                    <ul>
+                        <li>iOS 14.5 privacy updates affecting Facebook attribution</li>
+                        <li>Increased competition driving up bid prices</li>
+                        <li>Supply chain issues affecting e-commerce client campaigns</li>
+                        <li>Banner ad fatigue in display retargeting campaigns</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="recommendations-section">
+            <h2 class="section-title">🚀 Strategic Recommendations</h2>
+            <div class="section-content">
+                <div>
+                    <h3>Immediate Actions</h3>
+                    <ul>
+                        <li>Refresh display creative assets to combat ad fatigue</li>
+                        <li>Implement enhanced conversion tracking for iOS users</li>
+                        <li>Optimize Real Estate campaigns with new landing pages</li>
+                        <li>Expand successful healthcare campaigns to similar clients</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Strategic Initiatives</h3>
+                    <ul>
+                        <li>Invest in first-party data collection strategies</li>
+                        <li>Develop video-first creative strategy for social channels</li>
+                        <li>Launch connected TV advertising pilot program</li>
+                        <li>Implement advanced attribution modeling across channels</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Executive Summary -->
+        <div class="summary-card">
+            <h2 class="section-title">📋 Executive Summary</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+                <div>
+                    <h3 style="color: #27ae60; margin-bottom: 15px;">✅ Key Wins</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 5px 0; border-bottom: 1px solid #eee;">Google Ads CTR exceeding target by 20%</li>
+                        <li style="padding: 5px 0; border-bottom: 1px solid #eee;">Email marketing open rates up 14% YoY</li>
+                        <li style="padding: 5px 0; border-bottom: 1px solid #eee;">Healthcare vertical delivering 4.8x ROAS</li>
+                        <li style="padding: 5px 0;">Strong account management satisfaction (8.8/10 avg)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: #e74c3c; margin-bottom: 15px;">🔍 Focus Areas</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 5px 0; border-bottom: 1px solid #eee;">Display advertising performance optimization</li>
+                        <li style="padding: 5px 0; border-bottom: 1px solid #eee;">Real Estate vertical strategy revision</li>
+                        <li style="padding: 5px 0; border-bottom: 1px solid #eee;">Social media audience targeting refinement</li>
+                        <li style="padding: 5px 0;">Privacy-compliant attribution solutions</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="margin-top: 25px; padding: 20px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #667eea;">
+                <p style="font-size: 1.1rem; color: #2c3e50; margin: 0;">
+                    <strong>Overall Performance:</strong> Strong month with 3.6x average ROAS across all channels. 
+                    Email and Paid Search leading performance while Display and Social require optimization focus for Q4.
+                </p>
+            </div>
+        </div>
+
+        <!-- Print Instructions -->
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: #e9ecef; border-radius: 10px;">
+            <p style="color: #666; font-size: 0.9rem;">
+                <strong>To save as PDF:</strong> Use Ctrl+P (Cmd+P on Mac) → "Save as PDF" → Adjust margins if needed
+            </p>
+        </div>
+    </div>
+
+</body></html>
