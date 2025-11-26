@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
+import ConsultationDialog from "./ConsultationDialog";
 
 const Hero = () => {
   return (
@@ -42,41 +43,22 @@ const Hero = () => {
             Intelligence, Advanced Analytics & Intelligent Automation
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+            <ConsultationDialog>
             <Button size="lg" className="text-lg px-8 group">
               Let's Unlock Your Insights
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
+            </ConsultationDialog>
             <Button size="lg" variant="outline" className="text-lg px-8">
               View Our Work
             </Button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 pt-12 max-w-2xl mx-auto">
-            <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-primary">
-                100+
-              </div>
-              <div className="text-sm text-muted-foreground">
-                Dashboards Built
-              </div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-primary">
-                50+
-              </div>
-              <div className="text-sm text-muted-foreground">
-                Happy Clients
-              </div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-primary">
-                24/7
-              </div>
-              <div className="text-sm text-muted-foreground">Support</div>
-            </div>
-          </div>
+          
+            
+         
         </div>
       </div>
 

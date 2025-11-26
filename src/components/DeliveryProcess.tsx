@@ -5,19 +5,19 @@ const DeliveryProcess = () => {
     {
       number: "01",
       title: "Discovery & Data Review",
-      description: "Understanding your existing systems, KPIs, definitions, and overarching business goals to tailor the perfect solution.",
+      description: "Deep-dive into systems, data sources, KPIs & business goals to tailor the perfect solution.",
       icon: Search,
     },
     {
       number: "02",
       title: "Build & Integrate",
-      description: "Developing custom dashboards, data pipelines, robust data models, automation workflows, and predictive analytics.",
+      description: "Develop custom dashboards, pipelines, data models, automations & documentation.",
       icon: Code,
     },
     {
       number: "03",
-      title: "Deliver & Support",
-      description: "Providing comprehensive training, documentation, actionable insights, and continuous improvement to ensure sustained value.",
+      title: "Deliver, Train & Support",
+      description: "Handover, training, optimization & continuous improvement.",
       icon: Headphones,
     },
   ];

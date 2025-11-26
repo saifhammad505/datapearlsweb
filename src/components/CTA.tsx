@@ -8,9 +8,9 @@ const CTA = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-4xl md:text-6xl font-bold leading-tight">
-            Ready to Transform Your{" "}
+            Ready to Turn Your Data Into a {" "}
             <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              Data Journey?
+              Competitive Advantage?
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -21,14 +21,20 @@ const CTA = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
             <ConsultationDialog>
               <Button size="lg" className="text-lg px-8 group">
-                Schedule a Consultation
+                Book Free Strategy Call
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </ConsultationDialog>
             <Button size="lg" variant="outline" className="text-lg px-8" asChild>
               <a href="#services">View Our Services</a>
             </Button>
-          </div>
+
+            </div>
+            <p className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+            No sales pitch — just clarity on your data, KPIs & next steps
+          </p>
+            
+          
         </div>
       </div>
     </section>

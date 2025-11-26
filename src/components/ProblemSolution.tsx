@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Description } from "@radix-ui/react-alert-dialog";
 import { AlertCircle, CheckCircle2 } from "lucide-react";
 
 const ProblemSolution = () => {
@@ -44,6 +45,11 @@ const ProblemSolution = () => {
       title: "Real-Time Dashboards",
       description:
         "Instant access to KPIs and trends enabling proactive responses",
+    },
+
+    {
+      title: "Actionable Intelligence Layer",
+      Description: "Beyond dashboards — we deliver insights, alerts & performance narratives your team can act on.",
     },
   ];
 

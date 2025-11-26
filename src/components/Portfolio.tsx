@@ -3,43 +3,29 @@ import employeeKPI from "@/assets/portfolio-employee-kpi.png";
 import uberAnalytics from "@/assets/portfolio-uber-analytics.png";
 import salesDashboard from "@/assets/portfolio-sales-dashboard.png";
 import attendanceReport from "@/assets/portfolio-attendance-report.png";
+import callqueueDashboard from "@/assets/portfolio-callqueue-dashboard.png";
 
 const Portfolio = () => {
   const projects = [
-    {
-      title: "Operational Dashboard - Interpreter Bookings",
-      description:
-        "Comprehensive Power BI dashboard for high-volume interpreter bookings. Real-time Fill Rate trends, No-Show insights, TAT monitoring, and Conversion Rate tracking with automated SQL Server integration.",
-      image: "/case-studies/operational-dashboard.jpg",
-      tags: ["Power BI", "SQL Server", "Operations", "Real-time Analytics"],
-      link: "#case-studies",
-    },
-    {
-      title: "Monthly Campaign Performance Report",
-      description:
-        "Interactive multi-channel marketing analytics tracking Paid Search, Social Media, Email Marketing, and Display Ads performance with comprehensive KPIs and ROI analysis.",
-      image: "/case-studies/campaign-performance.jpg",
-      tags: ["Marketing Analytics", "Multi-Channel", "Performance Tracking"],
-      link: "/case-studies/campaign-performance-report.html",
-    },
+  
     {
       title: "Employee Performance Dashboard",
       description:
-        "Comprehensive KPI tracking system with collaboration, communication, and dependability metrics. Real-time performance monitoring and feedback analysis.",
+        "End-to-end KPI system improving visibility, performance measurement & leadership decision-making.",
       image: employeeKPI,
       tags: ["Power BI", "HR Analytics", "KPI Tracking"],
     },
     {
-      title: "Uber Rides Analytics",
+      title: "Operational Analytics",
       description:
-        "Advanced ride-sharing analytics with success rates, customer cancellations, and revenue analysis. Distance-based insights and vehicle type performance.",
+        "Multi-layer operations analytics with cancellation insights, revenue drivers & service efficiency metrics.",
       image: uberAnalytics,
       tags: ["Power BI", "Operations", "Revenue Analysis"],
     },
     {
       title: "Live Sales Dashboard",
       description:
-        "Real-time automotive sales tracking across multiple countries and product lines. Interactive filters, trend analysis, and profit margin monitoring.",
+        "Real-time sales tracking across multiple countries and product lines. Interactive filters, trend analysis, and profit margin monitoring.",
       image: salesDashboard,
       tags: ["Power BI", "Sales Analytics", "Executive Dashboard"],
     },
@@ -49,6 +35,14 @@ const Portfolio = () => {
         "Workforce management dashboard tracking attendance patterns, leave types, and punctuality trends with detailed insights and recommendations.",
       image: attendanceReport,
       tags: ["Power BI", "HR Analytics", "Workforce Management"],
+    },
+      {
+      title: "Call Center Dashboard - Queue Performance",
+      description:
+        "Real-time call queue insights enabling SLA tracking & agent KPI monitoring. ",
+      image: callqueueDashboard,
+      tags: ["Power BI", "SQL Server", "Operations", "Real-time Analytics"],
+      link: "#case-studies",
     },
   ];
 
