@@ -172,18 +172,6 @@ const Services = () => {
                         transition={{ duration: 0.3 }}
                         className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.gradient} p-[1px]`}
                       >
-                        <div className="w-full h-full rounded-xl bg-slate-900 flex items-center justify-center">
-                          <Icon className={`w-7 h-7 bg-gradient-to-br ${service.gradient} bg-clip-text`} style={{ color: 'transparent', fill: 'none', stroke: 'url(#gradient)' }} />
-                          <Icon className={`w-7 h-7 absolute text-transparent bg-clip-text bg-gradient-to-br ${service.gradient}`} />
-                        </div>
-                      </motion.div>
-                      
-                      {/* Fix icon color */}
-                      <motion.div
-                        whileHover={{ scale: 1.05, rotate: 5 }}
-                        transition={{ duration: 0.3 }}
-                        className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.gradient} p-[1px] -mt-[72px]`}
-                      >
                         <div className="w-full h-full rounded-xl bg-slate-900/90 flex items-center justify-center">
                           <Icon className="w-7 h-7 text-white" />
                         </div>
