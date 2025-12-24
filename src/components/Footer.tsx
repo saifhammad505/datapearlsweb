@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Linkedin, Mail, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Logo from "@/assets/logo/Lockup-LightblueIcon and Text.svg";
 
 const WhatsAppIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -32,21 +33,9 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  {
-    name: "LinkedIn",
-    icon: Linkedin,
-    href: "https://www.linkedin.com/company/110297114/",
-  },
-  {
-    name: "WhatsApp",
-    icon: WhatsAppIcon,
-    href: "https://wa.me/923199121040",
-  },
-  {
-    name: "Email",
-    icon: Mail,
-    href: "mailto:saifhammad505@gmail.com",
-  },
+  { name: "LinkedIn", icon: Linkedin, href: "#" },
+  { name: "WhatsApp", icon: WhatsAppIcon, href: "https://wa.me/15551234567" },
+  { name: "Email", icon: Mail, href: "mailto:hello@datapearls.com" },
 ];
 
 const Footer = () => {
@@ -61,13 +50,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Brand Section */}
           <div className="lg:col-span-2 space-y-6">
-            <Link to="/" className="inline-flex items-center gap-2">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500 to-violet-500 flex items-center justify-center">
-                <span className="text-white font-bold text-xl">D</span>
-              </div>
-              <span className="text-xl font-bold text-white">
-                Data<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-400">Pearls</span>
-              </span>
+            <Link to="/" className="inline-block">
+              <img src={Logo} alt="DataPearls" className="h-10" />
             </Link>
             
             <p className="text-slate-400 max-w-sm leading-relaxed">
