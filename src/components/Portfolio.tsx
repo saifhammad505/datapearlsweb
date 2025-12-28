@@ -6,9 +6,12 @@ import { TrendingUp, Target, CheckCircle2, Import } from "lucide-react";
 import opsImg from "@/assets/portfolio-ops.png";
 import opsimg2 from "@/assets/portfolio-ops-v2.png";
 import opsimg3 from "@/assets/portfolio-ops-v3.png";
+
 import workforceImg from "@/assets/portfolio-business-report.png";
-import workforceImg2 from "@/assets/portfolio-employee-kpi.png";
-import workforceImg3 from "@/assets/portfolio-workforce-report.png";
+import workforceImg2 from "@/assets/portfolio-workforce-report-v2.png";
+import workforceImg3 from "@/assets/cohort.png";
+import workforceImg4 from "@/assets/portfolio-workforce-report-v4.png";
+
 import reportingHubImg from "@/assets/portfolio-reportinghub-v2.png";
 import reportingHubImg2 from "@/assets/portfolio-reportinghub-v3.png";
 
@@ -60,7 +63,7 @@ const projects = [
       "Operational intelligence (Ops KPIs, Attendance, Punctuality, & Utilization)",
       "Automated SLAs, incentives & commissions logic for sales/operations",
     ],
-    images: [workforceImg, workforceImg2, workforceImg3],
+    images: [workforceImg, workforceImg2, workforceImg3,workforceImg4],
     accentColor: "emerald",
   },
 ];
