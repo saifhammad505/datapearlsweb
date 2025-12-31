@@ -4,6 +4,15 @@ import heroBackground from "@/assets/hero-background.jpg";
 import ConsultationDialog from "./ConsultationDialog";
 
 const Hero = () => {
+
+  const handleScrollToPortfolio = () => {
+  const section = document.getElementById("portfolio");
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
+
+
   return (
     <section
       id="home"
@@ -24,6 +33,7 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom duration-1000">
+
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-4">
             <TrendingUp className="w-4 h-4" />
             <span>Business Intelligence & Analytics</span>
@@ -43,21 +53,24 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+
             <ConsultationDialog>
-            <Button size="lg" className="text-lg px-8 group">
-              Let's Unlock Your Insights
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+              <Button size="lg" className="text-lg px-8 group">
+                Let's Unlock Your Insights
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
             </ConsultationDialog>
-            <Button size="lg" variant="outline" className="text-lg px-8">
+
+            <Button
+              size="lg"
+              variant="outline"
+              className="text-lg px-8"
+              onClick={handleScrollToPortfolio}
+            >
               View Our Work
             </Button>
-          </div>
 
-          {/* Stats */}
-          
-            
-         
+          </div>
         </div>
       </div>
 

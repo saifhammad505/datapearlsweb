@@ -96,7 +96,11 @@ const Portfolio = () => {
   };
 
   return (
-    <section className="relative py-24 overflow-hidden bg-slate-950">
+    <section
+      id="portfolio"
+      className="relative py-24 overflow-hidden bg-slate-950"
+    >
+
       {/* Background effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.08),transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(168,85,247,0.08),transparent_50%)]" />

@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 import { Linkedin, Mail, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Logo from "@/assets/logo/Lockup-LightblueIcon and Text.svg";
+import { NavLink } from "react-router-dom";
+import ConsultationDialog from "@/components/ConsultationDialog";
+import { scrollToSection } from "@/lib/scrolltosection";
+
+
 
 const WhatsAppIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -85,20 +90,26 @@ const Footer = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
               Services
             </h4>
+
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.href}
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-slate-400 hover:text-white text-sm transition-colors inline-flex items-center gap-1 group"
                   >
                     {link.name}
-                    <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
-                  </Link>
+                    <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-0.5 translate-x-0.5
+                      group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
+
+
 
           {/* Industries */}
           <div>
@@ -122,25 +133,53 @@ const Footer = () => {
           </div>
 
           {/* Company */}
+          
           <div>
             <h4 className="text-white font-semibold mb-4 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
               Company
             </h4>
+
             <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
+              {/* About Us */}
+              <li>
+                <button
+                  onClick={() => scrollToSection("about")}
+                  className="text-slate-400 hover:text-white text-sm transition-colors inline-flex items-center gap-1 group"
+                >
+                  About Us
+                  <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-0.5 translate-x-0.5
+                    group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
+                </button>
+              </li>
+
+              {/* Portfolio */}
+              <li>
+                <button
+                  onClick={() => scrollToSection("portfolio")}
+                  className="text-slate-400 hover:text-white text-sm transition-colors inline-flex items-center gap-1 group"
+                >
+                  Portfolio
+                  <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-0.5 translate-x-0.5
+                    group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
+                </button>
+              </li>
+
+              {/* Contact */}
+              <li>
+                <ConsultationDialog>
+                  <button
                     className="text-slate-400 hover:text-white text-sm transition-colors inline-flex items-center gap-1 group"
                   >
-                    {link.name}
-                    <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
-                  </Link>
-                </li>
-              ))}
+                    Contact
+                    <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-0.5 translate-x-0.5
+                      group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
+                  </button>
+                </ConsultationDialog>
+              </li>
             </ul>
           </div>
+
         </div>
 
         {/* Bottom Bar */}
