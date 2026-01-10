@@ -47,15 +47,15 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-[1.1] tracking-tight mb-8"
             >
-              See Clearly.
-              <br />
-              <span className="bg-gradient-to-r from-primary to-primary/20 bg-clip-text text-transparent">
+              <span className="block text-foreground">
+                See Clearly.
+              </span>
+              <span className="block bg-gradient-to-r from-primary via-primary/80 to-secondary bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
                 Act Decisively.
               </span>
-              <br />
-              <span className="text-foreground white/390">
+              <span className="block text-foreground/90">
                 Scale Confidently.
               </span>
             </motion.h1>
