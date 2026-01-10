@@ -63,6 +63,16 @@ const services = [
     glow: "indigo",
     flagship: false,
   },
+  {
+    icon: Workflow,
+    title: "Workflow Automation",
+    description:
+      "Automate manual, repetitive processes to save time, reduce errors, and increase efficiency across your organization.",
+    link: "/services/WorkflowAutomation",
+    gradient: "from-rose-500 to-pink-500",
+    glow: "rose",
+    flagship: false,
+  },
 ];
 
 
