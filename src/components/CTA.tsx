@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import ConsultationDialog from "./ConsultationDialog";
 
 const CTA = () => {
@@ -26,7 +27,7 @@ const CTA = () => {
               </Button>
             </ConsultationDialog>
             <Button size="lg" variant="outline" className="text-lg px-8" asChild>
-              <a href="#services">View Our Services</a>
+              <Link to="/services">View Our Services</Link>
             </Button>
 
             </div>
