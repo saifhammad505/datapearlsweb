@@ -1,4 +1,3 @@
-// PredictiveAnalytics Page Component
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -13,91 +12,104 @@ import {
   Lightbulb,
   Activity,
   TrendingUp,
-  FlaskConical,
+  Shield,
+  AlertTriangle,
   Sparkles,
+  Zap,
+  Bot,
+  FileText,
 } from "lucide-react";
 import ConsultationDialog from "@/components/ConsultationDialog";
 import dashboardIllustration from "@/assets/PredictiveAnalysisPage.png";
 
-const PredictiveAnalytics = () => {
+const AdvancedIntelligence = () => {
   const features = [
     {
-      title: "Problem Definition",
-      icon: Target,
-      gradient: "from-rose-500/20 to-orange-500/20",
-      iconColor: "text-rose-400",
-      items: [
-        "Predict churn, sales, demand, risk, fraud, etc.",
-        "Define target variables & business objectives",
-      ],
-    },
-    {
-      title: "Data Preparation",
-      icon: FlaskConical,
-      gradient: "from-violet-500/20 to-purple-500/20",
-      iconColor: "text-violet-400",
-      items: [
-        "Feature engineering",
-        "Missing value handling",
-        "Outlier treatment",
-      ],
-    },
-    {
-      title: "Model Development",
-      icon: Brain,
+      title: "Predictive Planning & Forecasting",
+      icon: TrendingUp,
       gradient: "from-cyan-500/20 to-blue-500/20",
       iconColor: "text-cyan-400",
       items: [
-        "Classification, regression, clustering",
-        "Random Forest, XGBoost, LightGBM, SVM",
-        "Hyperparameter tuning",
+        "Demand forecasting for inventory and resource planning",
+        "Sales & revenue projections with confidence intervals",
+        "Workforce planning & capacity predictions",
+        "Scenario modeling for strategic decisions",
       ],
     },
     {
-      title: "Model Explainability",
+      title: "Risk & Anomaly Detection",
+      icon: Shield,
+      gradient: "from-rose-500/20 to-orange-500/20",
+      iconColor: "text-rose-400",
+      items: [
+        "Fraud detection & prevention systems",
+        "Anomaly detection in financial transactions",
+        "Operational risk identification & alerting",
+        "Quality control & defect prediction",
+      ],
+    },
+    {
+      title: "Automated Intelligence & Reporting",
+      icon: Bot,
+      gradient: "from-violet-500/20 to-purple-500/20",
+      iconColor: "text-violet-400",
+      items: [
+        "AI-generated narrative insights & summaries",
+        "Automated root cause analysis reports",
+        "Smart alerting with contextual recommendations",
+        "Self-updating dashboards with predictive KPIs",
+      ],
+    },
+    {
+      title: "Machine Learning Models",
+      icon: Brain,
+      gradient: "from-emerald-500/20 to-teal-500/20",
+      iconColor: "text-emerald-400",
+      items: [
+        "Classification, regression & clustering models",
+        "Customer churn & lifetime value prediction",
+        "Lead scoring & conversion optimization",
+        "Custom ML solutions for domain-specific problems",
+      ],
+    },
+    {
+      title: "Model Explainability & Governance",
       icon: Lightbulb,
       gradient: "from-amber-500/20 to-yellow-500/20",
       iconColor: "text-amber-400",
       items: [
-        "SHAP values",
-        "Feature importance reports",
-        "Scenario simulations",
-      ],
-    },
-    {
-      title: "Deployment (Optional)",
-      icon: Activity,
-      gradient: "from-emerald-500/20 to-teal-500/20",
-      iconColor: "text-emerald-400",
-      items: [
-        "Streamlit apps",
-        "FastAPI endpoints",
-        "Integration with BI dashboards",
+        "SHAP values & feature importance reports",
+        "What-if scenario simulations",
+        "Model performance monitoring & drift detection",
+        "Compliance-ready documentation",
       ],
     },
   ];
 
   const benefits = [
-    { text: "Predict future outcomes before they happen", icon: TrendingUp, gradient: "from-cyan-500 to-blue-500" },
-    { text: "Reduce churn & improve customer retention", icon: Target, gradient: "from-rose-500 to-pink-500" },
-    { text: "Increase revenue through forecasting", icon: LineChart, gradient: "from-emerald-500 to-teal-500" },
-    { text: "Detect risks & fraud early", icon: Activity, gradient: "from-amber-500 to-orange-500" },
-    { text: "Smarter resource allocation", icon: BarChart3, gradient: "from-violet-500 to-purple-500" },
+    { text: "Make decisions before problems occur — not after", icon: TrendingUp, gradient: "from-cyan-500 to-blue-500" },
+    { text: "Detect fraud, anomalies & risks in real-time", icon: Shield, gradient: "from-rose-500 to-pink-500" },
+    { text: "Automate repetitive analysis & reporting tasks", icon: Bot, gradient: "from-violet-500 to-purple-500" },
+    { text: "Improve forecast accuracy by 30-50%", icon: LineChart, gradient: "from-emerald-500 to-teal-500" },
+    { text: "Enable data-driven planning across all departments", icon: BarChart3, gradient: "from-amber-500 to-orange-500" },
   ];
 
   const useCases = [
-    { industry: "HR", use: "Attrition prediction", icon: Brain, gradient: "from-pink-500/20 to-rose-500/20" },
-    { industry: "Sales", use: "Forecasting & lead scoring", icon: TrendingUp, gradient: "from-cyan-500/20 to-blue-500/20" },
-    { industry: "Healthcare", use: "Disease risk prediction", icon: Activity, gradient: "from-emerald-500/20 to-teal-500/20" },
-    { industry: "Retail", use: "Demand forecasting", icon: LineChart, gradient: "from-amber-500/20 to-yellow-500/20" },
-    { industry: "Finance", use: "Fraud detection", icon: Target, gradient: "from-violet-500/20 to-purple-500/20" },
+    { industry: "Finance", use: "Fraud detection & credit risk scoring", icon: Shield, gradient: "from-rose-500/20 to-pink-500/20" },
+    { industry: "Retail", use: "Demand forecasting & inventory optimization", icon: TrendingUp, gradient: "from-cyan-500/20 to-blue-500/20" },
+    { industry: "Operations", use: "Predictive maintenance & capacity planning", icon: Activity, gradient: "from-emerald-500/20 to-teal-500/20" },
+    { industry: "HR", use: "Attrition prediction & workforce planning", icon: Brain, gradient: "from-violet-500/20 to-purple-500/20" },
+    { industry: "Sales", use: "Lead scoring & revenue forecasting", icon: Target, gradient: "from-amber-500/20 to-yellow-500/20" },
+    { industry: "Healthcare", use: "Patient risk stratification & resource planning", icon: AlertTriangle, gradient: "from-indigo-500/20 to-blue-500/20" },
   ];
 
   const deliverables = [
-    { text: "Trained ML model", icon: Brain, gradient: "from-cyan-500 to-blue-500" },
-    { text: "Insight report & what-if analysis", icon: Lightbulb, gradient: "from-amber-500 to-yellow-500" },
-    { text: "Deployment-ready ML app", icon: Activity, gradient: "from-emerald-500 to-teal-500" },
-    { text: "Executive presentation", icon: BarChart3, gradient: "from-violet-500 to-purple-500" },
+    { text: "Production-ready ML models with API endpoints", icon: Brain, gradient: "from-cyan-500 to-blue-500" },
+    { text: "Automated intelligence dashboards", icon: BarChart3, gradient: "from-violet-500 to-purple-500" },
+    { text: "Risk & anomaly detection systems", icon: Shield, gradient: "from-rose-500 to-pink-500" },
+    { text: "Predictive insights & forecast reports", icon: TrendingUp, gradient: "from-emerald-500 to-teal-500" },
+    { text: "Model explainability documentation", icon: FileText, gradient: "from-amber-500 to-yellow-500" },
+    { text: "Executive presentation with ROI analysis", icon: Lightbulb, gradient: "from-indigo-500 to-blue-500" },
   ];
 
   return (
@@ -125,20 +137,35 @@ const PredictiveAnalytics = () => {
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm"
               >
                 <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm text-primary font-medium">Machine Learning Solutions</span>
+                <span className="text-sm text-primary font-medium">AI-Powered Decision Systems</span>
               </motion.div>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
-                Predictive{" "}
+                Advanced{" "}
                 <span className="bg-gradient-to-r from-primary via-violet-400 to-primary bg-clip-text text-transparent">
-                  Analytics
+                  Decision Intelligence
                 </span>
               </h1>
 
               <p className="text-xl text-slate-400 leading-relaxed max-w-xl">
-                Leverage machine learning to predict future outcomes and enable proactive,
-                data-driven decision-making across your organization.
+                Advanced decision systems that enable proactive planning, risk prevention, 
+                and intelligent automation at scale — powered by machine learning.
               </p>
+
+              <div className="flex flex-wrap gap-3">
+                <span className="px-3 py-1.5 text-sm rounded-full bg-slate-800/50 text-slate-300 border border-slate-700/50">
+                  <Zap className="w-3.5 h-3.5 inline mr-1.5" />
+                  Predictive Planning
+                </span>
+                <span className="px-3 py-1.5 text-sm rounded-full bg-slate-800/50 text-slate-300 border border-slate-700/50">
+                  <Shield className="w-3.5 h-3.5 inline mr-1.5" />
+                  Risk Detection
+                </span>
+                <span className="px-3 py-1.5 text-sm rounded-full bg-slate-800/50 text-slate-300 border border-slate-700/50">
+                  <Bot className="w-3.5 h-3.5 inline mr-1.5" />
+                  Automated Intelligence
+                </span>
+              </div>
 
               <ConsultationDialog>
                 <Button size="lg" className="text-lg px-8 py-6 group bg-primary hover:bg-primary/90">
@@ -157,7 +184,7 @@ const PredictiveAnalytics = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-violet-500/30 rounded-3xl blur-3xl opacity-40" />
               <img
                 src={dashboardIllustration}
-                alt="Predictive Analytics Illustration"
+                alt="Advanced Decision Intelligence Illustration"
                 className="relative w-full max-w-lg drop-shadow-2xl rounded-2xl"
               />
             </motion.div>
@@ -180,7 +207,7 @@ const PredictiveAnalytics = () => {
               Core <span className="text-primary">Capabilities</span>
             </h2>
             <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-              End-to-end machine learning solutions from problem definition to deployment
+              End-to-end intelligent decision systems from prediction to automation
             </p>
           </motion.div>
 
@@ -198,7 +225,7 @@ const PredictiveAnalytics = () => {
                   className="group relative"
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} rounded-3xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500`} />
-                  <div className="relative p-8 rounded-3xl bg-slate-900/80 border border-slate-800/50 backdrop-blur-xl hover:border-primary/30 transition-all duration-300">
+                  <div className="relative p-8 rounded-3xl bg-slate-900/80 border border-slate-800/50 backdrop-blur-xl hover:border-primary/30 transition-all duration-300 h-full">
                     <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-6`}>
                       <Icon className={`w-7 h-7 ${feature.iconColor}`} />
                     </div>
@@ -306,7 +333,7 @@ const PredictiveAnalytics = () => {
       <section className="py-28 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950 to-slate-900/50" />
 
-        <div className="container relative mx-auto px-6 max-w-5xl">
+        <div className="container relative mx-auto px-6 max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -318,7 +345,7 @@ const PredictiveAnalytics = () => {
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {deliverables.map((item, index) => {
               const Icon = item.icon;
               return (
@@ -333,7 +360,7 @@ const PredictiveAnalytics = () => {
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${item.gradient} flex items-center justify-center flex-shrink-0`}>
                     <Icon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-xl text-slate-300">{item.text}</span>
+                  <span className="text-lg text-slate-300">{item.text}</span>
                 </motion.div>
               );
             })}
@@ -346,4 +373,4 @@ const PredictiveAnalytics = () => {
   );
 };
 
-export default PredictiveAnalytics;
+export default AdvancedIntelligence;
