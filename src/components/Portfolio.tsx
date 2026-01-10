@@ -22,8 +22,8 @@ const projects = [
     domain: "Enterprise BI Platforms",
     title: "Enterprise Reporting Hub",
     summary:
-      "A centralized reporting portal enabling unlimited internal and external users to securely access dashboards without BI licensing constraints.",
-    outcome: "£12,000 annual savings on BI licenses",
+      "A centralized reporting portal enabling unlimited internal and external users to securely access dashboards without Power BI licensing constraints.",
+    outcome: "£12,000 annual savings on Power BI licenses",
     impact: "80% increase in organizational data accessibility",
     features: [
       "Centralized analytics gateway",

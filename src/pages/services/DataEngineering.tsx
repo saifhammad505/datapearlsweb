@@ -114,10 +114,10 @@ const DataEngineering = () => {
               </motion.div>
 
               <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
-                <span className="text-white">Data</span>
+                <span className="text-white">Data Foundation &</span>
                 <br />
                 <span className="bg-gradient-to-r from-orange-400 via-amber-400 to-violet-400 bg-clip-text text-transparent">
-                  Engineering
+                  Warehousing
                 </span>
               </h1>
 

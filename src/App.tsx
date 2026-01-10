@@ -9,8 +9,8 @@ import BIaaS from "./pages/services/BIaaS";
 import DataAnalytics from "./pages/services/DataAnalytics";
 import BIDashboards from "./pages/services/BIDashboards";
 import DataEngineering from "./pages/services/DataEngineering";
-import WorkflowAutomation from "./pages/services/WorkflowAutomation";
 import PredictiveAnalytics from "./pages/services/PredictiveAnalytics";
+import ManagedBI from "./pages/services/BIaaS";
 
 const queryClient = new QueryClient();
 
@@ -22,11 +22,10 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/services/biaas" element={<BIaaS />} />
-          <Route path="/services/data-analytics" element={<DataAnalytics />} />
-          <Route path="/services/bi-dashboards" element={<BIDashboards />} />
-          <Route path="/services/data-engineering" element={<DataEngineering />} />
-          <Route path="/services/workflow-automation" element={<WorkflowAutomation />} />
+          <Route path="/services/BIaaS" element={<ManagedBI />} />
+          <Route path="/services/DataAnalytics" element={<DataAnalytics />} />
+          <Route path="/services/BiDashboards" element={<BIDashboards />} />
+          <Route path="/services/DataEngineering" element={<DataEngineering />} />
           <Route path="/services/predictive-analytics" element={<PredictiveAnalytics />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

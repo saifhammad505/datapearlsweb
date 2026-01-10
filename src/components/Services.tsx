@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import {
   BarChart3,
   Database,
-  Zap,
+  Crown,
+  TrendingUp,
   Brain,
   LineChart,
   Workflow,
@@ -13,60 +14,58 @@ import {
 
 const services = [
   {
-    icon: BarChart3,
-    title: "BI-as-a-Service",
+    icon: Crown,
+    title: "Managed Business Intelligence",
     description:
-      "Your dedicated BI department, owning the full BI lifecycle so your team can stay focused on execution and growth.",
-    link: "/services/biaas",
+      "Your dedicated BI & analytics function — ensuring leadership always has a clear, trusted view of performance and priorities.",
+    link: "/services/BiaaS",
     gradient: "from-cyan-500 to-blue-500",
     glow: "cyan",
+    flagship: true,
   },
   {
-    icon: LineChart,
-    title: "Business Analytics",
+    icon: BarChart3,
+    title: "Decision-Ready Dashboards",
     description:
-      "Turn raw data into actionable insights. Sales analysis, customer segmentation, financial forecasting, and performance optimization.",
-    link: "/services/data-analytics",
+      "Purpose-built dashboards designed around leadership decisions — providing immediate clarity on performance, risks, and priorities.",
+    link: "/services/BIDashboards",
     gradient: "from-violet-500 to-purple-500",
     glow: "violet",
+    flagship: false,
   },
   {
     icon: Database,
-    title: "BI Dashboards",
+    title: "Data Foundation & Warehousing",
     description:
-      "Custom BI dashboards with real-time visibility. Executive-level reporting, operational KPIs, and actionable insights.",
-    link: "/services/bi-dashboards",
+      "A centralized, governed data foundation that ensures every team works from a single, trusted source of truth.",
+    link: "/services/DataEngineering",
     gradient: "from-emerald-500 to-teal-500",
     glow: "emerald",
+    flagship: false,
   },
   {
-    icon: Zap,
-    title: "Data Engineering",
+    icon: TrendingUp,
+    title: "Performance & Operations Analytics",
     description:
-      "Build modern, automated data architectures. SQL warehouses, ETL pipelines, API integrations and more.",
-    link: "/services/data-engineering",
+      "Deep operational and financial analysis to uncover inefficiencies, cost leakage, and execution bottlenecks.",
+    link: "/services/DataAnalytics",
     gradient: "from-amber-500 to-orange-500",
     glow: "amber",
-  },
-  {
-    icon: Workflow,
-    title: "Workflow Automation",
-    description:
-      "Automate reporting and approval workflows. Python, Power Automate, and automated report distribution.",
-    link: "/services/workflow-automation",
-    gradient: "from-rose-500 to-pink-500",
-    glow: "rose",
+    flagship: false,
   },
   {
     icon: Brain,
-    title: "Predictive Analytics",
+    title: "Advanced Decision Intelligence",
     description:
-      "Move from reactive to proactive with ML models. Churn prediction, sales forecasting, fraud detection, and risk analysis.",
-    link: "/services/predictive-analytics",
+      "Advanced decision systems that enable proactive planning, risk prevention, and intelligent automation at scale.",
+    link: "/services/advanced-intelligence",
     gradient: "from-indigo-500 to-blue-500",
     glow: "indigo",
+    flagship: false,
   },
 ];
+
+
 
 const glowColors: Record<string, string> = {
   cyan: "rgba(6, 182, 212, 0.4)",
@@ -158,6 +157,16 @@ const Services = () => {
                     <div 
                       className={`absolute top-0 left-0 right-0 h-px bg-gradient-to-r ${service.gradient} opacity-50 group-hover:opacity-100 transition-opacity duration-300`}
                     />
+                    {/* Flagship badge */}
+                    {service.flagship && (
+  <div className="absolute top-4 right-4 md:top-6 md:right-6">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-medium">
+                    <Crown className="w-3 h-3" />
+      Flagship Service
+    </span>
+  </div>
+)}
+
                     
                     {/* Corner accent */}
                     <div 

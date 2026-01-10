@@ -117,7 +117,7 @@ const BIDashboards = () => {
               </motion.div>
 
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                <span className="text-white">Business Intelligence</span>
+                <span className="text-white">Decision-Ready</span>
                 <br />
                 <span className="bg-gradient-to-r from-violet-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">
                   Dashboards

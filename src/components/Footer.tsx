@@ -16,19 +16,22 @@ const WhatsAppIcon = () => (
 
 const footerLinks = {
   services: [
-    { name: "BI-as-a-Service", href: "/services/biaas" },
-    { name: "Business Analytics", href: "/services/data-analytics" },
-    { name: "BI Dashboards", href: "/services/bi-dashboards" },
-    { name: "Data Engineering", href: "/services/data-engineering" },
-    { name: "Predictive Analytics", href: "/services/predictive-analytics" },
-    { name: "Workflow Automation", href: "/services/workflow-automation" },
+    { name: "Managed Business Intelligence", href: "/services/biaas" },
+    { name: "Decision Ready Dashboards", href: "/services/data-analytics" },
+    { name: "Performance & Operations Analytics", href: "/services/bi-dashboards" },
+    { name: "Data Foundation & Warehousing", href: "/services/data-engineering" },
+    { name: "Advanced Decision Intelligence", href: "/services/predictive-analytics" },
   ],
   industries: [
+    { name: "Technology", href: "/#portfolio" },
     { name: "Healthcare", href: "/#portfolio" },
-    { name: "Transportation", href: "/#portfolio" },
+    { name: "Logistics", href: "/#portfolio" },
     { name: "Retail & E-commerce", href: "/#portfolio" },
     { name: "Finance", href: "/#portfolio" },
-    { name: "Manufacturing", href: "/#portfolio" },
+    { name: "Manufacturing", href: "/#portfolio" },    
+    { name: "Energy & Utilities", href: "/#portfolio" },
+    { name: "Education", href: "/#portfolio" },
+
   ],
   company: [
     { name: "About Us", href: "/#about" },

@@ -1,83 +1,121 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, TrendingUp } from "lucide-react";
-import heroBackground from "@/assets/hero-background.jpg";
-import ConsultationDialog from "./ConsultationDialog";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import biimage from "@/assets/PredictiveAnalysisPage.png";
 
 const Hero = () => {
-
-  const handleScrollToPortfolio = () => {
-  const section = document.getElementById("portfolio");
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-};
-
-
   return (
-    <section
-      id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-    >
-      {/* Background Image with Overlay */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${heroBackground})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-primary/20" />
-      </div>
+        
+          <section className="relative min-h-[90vh] bg-background overflow-hidden">
+  
+  {/* 1. Absolute dark base (insurance layer) */}
+  <div className="absolute inset-0 bg-slate-950" />
 
-      {/* Content */}
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom duration-1000">
+  {/* 2. Atmospheric radial */}
+  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--primary)/0.15),transparent_50%)]" />
 
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-4">
-            <TrendingUp className="w-4 h-4" />
-            <span>Business Intelligence & Analytics</span>
-          </div>
+  {/* 3. Accent glows */}
+  <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-secondary/10 blur-3xl rounded-full" />
+  <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/10 blur-3xl rounded-full" />
 
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            Transforming{" "}
-            <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
-              Data Chaos
-            </span>
-            <br />
-            Into Insights & Action
-          </h1>
+  {/* 4. Texture */}
+  <div className="absolute inset-0 grid-pattern opacity-[0.07]" />
 
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-            Unlock real-time decision-making with powerful Business Intelligence, Data Analytics, and Intelligent Automation — helping you accelerate growth with clarity and confidence.
-          </p>
+  {/* 5. Content */}
+  <div className="relative z-10 container ..."/>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
 
-            <ConsultationDialog>
-              <Button size="lg" className="text-lg px-8 group">
-                Let's Unlock Your Insights
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </ConsultationDialog>
+      <div className="container relative mx-auto px-6 py-24">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-lg px-8"
-              onClick={handleScrollToPortfolio}
+          {/* LEFT — CONTENT */}
+          <div className="max-w-2xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/50 border border-border/50 mb-8"
             >
-              View Our Work
-            </Button>
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span className="text-sm text-muted-foreground">
+                Decision Intelligence Partner
+              </span>
+            </motion.div>
 
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight mb-6"
+            >
+              See Clearly.
+              <br />
+              <span className="bg-gradient-to-r from-primary to-primary/20 bg-clip-text text-transparent">
+                Act Decisively.
+              </span>
+              <br />
+              <span className="text-foreground white/390">
+                Scale Confidently.
+              </span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10"
+            >
+              DataPearls operates as your decision intelligence function — giving
+              leadership absolute clarity, control, and confidence to drive growth
+              in complex environments.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <Button
+                asChild
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 h-12"
+              >
+                <Link to="/contact">
+                  Book a Consultation
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-border/50 hover:bg-accent px-8 h-12"
+              >
+                <Link to="/services">Explore Services</Link>
+              </Button>
+            </motion.div>
           </div>
-        </div>
-      </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary/50 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-primary rounded-full" />
+          {/* RIGHT — IMAGE */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="relative hidden lg:block"
+          >
+            {/* Glow */}
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/25 to-secondary/25 blur-3xl rounded-full" />
+
+            <img
+              src={biimage}
+              alt="Decision Intelligence Dashboards"
+              className="relative w-full max-w-xl mx-auto rounded-xl shadow-2xl"
+            />
+          </motion.div>
+
         </div>
       </div>
     </section>
