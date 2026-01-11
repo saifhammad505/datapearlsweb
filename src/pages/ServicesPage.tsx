@@ -8,7 +8,6 @@ import {
   Database,
   TrendingUp,
   Brain,
-  Workflow,
   ArrowRight,
 } from "lucide-react";
 
@@ -58,15 +57,6 @@ const services = [
     link: "/services/advanced-intelligence",
     gradient: "from-indigo-500 to-blue-500",
     glow: "rgba(99, 102, 241, 0.4)",
-  },
-  {
-    icon: Workflow,
-    title: "Workflow Automation",
-    description:
-      "Automate manual, repetitive processes to save time, reduce errors, and increase efficiency. Python scripts, Power Automate flows, and API integrations.",
-    link: "/services/WorkflowAutomation",
-    gradient: "from-rose-500 to-pink-500",
-    glow: "rgba(244, 63, 94, 0.4)",
   },
 ];
 

@@ -7,8 +7,6 @@ import {
   Crown,
   TrendingUp,
   Brain,
-  LineChart,
-  Workflow,
   ArrowUpRight,
 } from "lucide-react";
 
@@ -63,16 +61,6 @@ const services = [
     glow: "indigo",
     flagship: false,
   },
-  {
-    icon: Workflow,
-    title: "Workflow Automation",
-    description:
-      "Automate manual, repetitive processes to save time, reduce errors, and increase efficiency across your organization.",
-    link: "/services/WorkflowAutomation",
-    gradient: "from-rose-500 to-pink-500",
-    glow: "rose",
-    flagship: false,
-  },
 ];
 
 
@@ -82,7 +70,6 @@ const glowColors: Record<string, string> = {
   violet: "rgba(139, 92, 246, 0.4)",
   emerald: "rgba(16, 185, 129, 0.4)",
   amber: "rgba(245, 158, 11, 0.4)",
-  rose: "rgba(244, 63, 94, 0.4)",
   indigo: "rgba(99, 102, 241, 0.4)",
 };
 
