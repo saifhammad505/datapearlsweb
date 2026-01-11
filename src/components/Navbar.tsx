@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Crown, BarChart3, Database, TrendingUp, Brain, Workflow } from "lucide-react";
+import { Menu, X, ChevronDown, Crown, BarChart3, Database, TrendingUp, Brain } from "lucide-react";
 import Logo from "@/assets/logo/Lockup-LightblueIcon and Text.svg";
 import ConsultationDialog from "./ConsultationDialog";
 import { motion, AnimatePresence } from "framer-motion";
@@ -41,13 +41,6 @@ const services = [
     description: "Predictive planning & risk detection",
     link: "/services/advanced-intelligence",
     gradient: "from-indigo-500 to-blue-500",
-  },
-  {
-    icon: Workflow,
-    title: "Workflow Automation",
-    description: "Automate repetitive processes",
-    link: "/services/WorkflowAutomation",
-    gradient: "from-rose-500 to-pink-500",
   },
 ];
 

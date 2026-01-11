@@ -49,13 +49,13 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-[1.1] tracking-tight mb-8"
             >
-              <span className="block text-foreground">
+              <span className="block text-white">
                 See Clearly.
               </span>
-              <span className="block bg-gradient-to-r from-primary via-primary/80 to-secondary bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+              <span className="block bg-gradient-to-r from-primary via-cyan-400 to-secondary bg-clip-text text-transparent">
                 Act Decisively.
               </span>
-              <span className="block text-foreground/90">
+              <span className="block text-slate-200">
                 Scale Confidently.
               </span>
             </motion.h1>
@@ -64,7 +64,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10"
+              className="text-lg md:text-xl text-slate-300 leading-relaxed mb-10"
             >
               DataPearls operates as your decision intelligence function — giving
               leadership absolute clarity, control, and confidence to drive growth

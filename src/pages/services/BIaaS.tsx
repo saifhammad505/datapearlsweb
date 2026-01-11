@@ -95,15 +95,15 @@ const deliverables = [
 
 const ManagedBI = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-slate-950">
       <Navbar />
       
       {/* PREMIUM HERO */}
       <section className="relative pt-32 pb-32 overflow-hidden">
         {/* Premium Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--primary)/0.15),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,hsl(var(--secondary)/0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/8 via-slate-950 to-slate-950" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--primary)/0.12),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,hsl(var(--secondary)/0.08),transparent_50%)]" />
         
         {/* Animated Orbs */}
         <motion.div 
@@ -231,7 +231,7 @@ const ManagedBI = () => {
 
       {/* WHAT THIS IS - Premium Glass Cards */}
       <section className="py-28 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/50 to-slate-950" />
 
         <div className="container mx-auto px-6 relative z-10 max-w-5xl">
           <motion.div
@@ -285,7 +285,7 @@ const ManagedBI = () => {
 
       {/* CAPABILITIES */}
       <section className="py-28 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-slate-950 to-secondary/5" />
         
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
@@ -332,7 +332,7 @@ const ManagedBI = () => {
 
       {/* ENGAGEMENT MODEL */}
       <section className="py-28 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/30 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/30 to-slate-950" />
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -459,7 +459,7 @@ const ManagedBI = () => {
 
       {/* INDUSTRIES */}
       <section className="py-28 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary/5 via-transparent to-primary/5" />
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary/5 via-slate-950 to-primary/5" />
         
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
@@ -500,7 +500,7 @@ const ManagedBI = () => {
 
       {/* DELIVERABLES */}
       <section className="py-28 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/20 to-slate-950" />
         
         <div className="container mx-auto px-6 relative z-10 max-w-4xl">
           <motion.div
@@ -539,8 +539,8 @@ const ManagedBI = () => {
 
       {/* PREMIUM CTA */}
       <section className="py-28 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.1),transparent_70%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-slate-950 to-secondary/8" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.08),transparent_70%)]" />
         
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
