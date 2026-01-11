@@ -27,55 +27,63 @@ import dashboardIllustration from "@/assets/BISaasPage.png";
 const capabilities = [
   {
     icon: Database,
-    title: "Data Foundation & Warehousing",
-    description: "Centralized, governed data infrastructure serving as a single source of truth.",
+    title: "Enterprise Data Foundation & Warehousing",
+    description:
+      "A centralized, governed data foundation that consolidates all business systems into a single, trusted source of truth.",
     gradient: "from-cyan-500/20 to-blue-500/20",
     iconColor: "text-cyan-400",
   },
   {
     icon: Gauge,
-    title: "KPI Framework & Governance",
-    description: "Standardized metrics aligned with leadership priorities.",
+    title: "KPI Framework & Performance Governance",
+    description:
+      "Clearly defined, standardized KPIs aligned with executive priorities and embedded into daily decision-making.",
     gradient: "from-violet-500/20 to-purple-500/20",
     iconColor: "text-violet-400",
   },
   {
     icon: LineChart,
     title: "Executive & Operational Dashboards",
-    description: "Decision-ready views focused on what matters most.",
+    description:
+      "Decision-ready dashboards designed for leadership and teams, focusing attention on outcomes, risks, and performance drivers.",
     gradient: "from-emerald-500/20 to-teal-500/20",
     iconColor: "text-emerald-400",
   },
   {
     icon: Shield,
-    title: "Data Quality & Security",
-    description: "Continuous monitoring for accuracy, reliability, and control.",
+    title: "Data Quality, Security & Continuity",
+    description:
+      "Built-in controls, validation, access management, and redundancy to ensure accuracy, reliability, and uninterrupted reporting.",
     gradient: "from-rose-500/20 to-pink-500/20",
     iconColor: "text-rose-400",
   },
   {
     icon: HeadphonesIcon,
-    title: "Ongoing Support & Enhancements",
-    description: "Proactive improvements aligned with evolving business needs.",
+    title: "Ongoing BI Support & Continuous Improvement",
+    description:
+      "Dedicated support, enhancements, and optimisation delivered continuously as your business evolves.",
     gradient: "from-amber-500/20 to-yellow-500/20",
     iconColor: "text-amber-400",
   },
   {
     icon: BarChart3,
-    title: "Strategic Insights & Advisory",
-    description: "Regular insight sessions connecting data to outcomes.",
+    title: "Strategic Insights & Executive Advisory",
+    description:
+      "Regular insight-led reviews that translate data into actions, priorities, and measurable business outcomes.",
     gradient: "from-indigo-500/20 to-blue-500/20",
     iconColor: "text-indigo-400",
   },
 ];
 
+
 const impacts = [
-  "Faster, more confident decisions",
-  "Elimination of conflicting numbers",
-  "Reduced manual reporting effort",
-  "Improved operational visibility",
-  "Analytics that scale with growth",
+  "Faster, more confident executive decision-making",
+  "A single, trusted version of the truth across the organisation",
+  "Significant reduction in manual reporting and internal BI workload",
+  "Clear visibility across operations, finance, and performance",
+  "A scalable BI function without the cost of building an in-house team",
 ];
+
 
 const industries = [
   {
@@ -101,11 +109,13 @@ const industries = [
 ];
 
 const deliverables = [
-  "Managed data warehouse",
+  "Managed data platform",
   "Enterprise dashboards",
   "KPI definitions & governance",
   "Monthly insights review",
   "Automated refresh & monitoring",
+  "Ongoing support & optimization",
+  "Ad hoc analysis & requests",
 ];
 
 const ManagedBI = () => {
@@ -176,8 +186,7 @@ const ManagedBI = () => {
               </p>
 
               <p className="text-lg text-slate-400 max-w-xl mb-8 leading-relaxed">
-                We operate as your internal analytics function — owning data,
-                dashboards, KPIs, and insights — so leadership always makes decisions
+                We operate as your internal analytics department, turning raw data into insights, so leadership always makes decisions
                 with confidence, not assumptions.
               </p>
 
@@ -185,7 +194,7 @@ const ManagedBI = () => {
               <div className="flex flex-wrap gap-3 mb-10">
                 <span className="px-4 py-2 text-sm rounded-full bg-slate-800/60 text-slate-200 border border-slate-700/50 backdrop-blur-sm">
                   <Database className="w-3.5 h-3.5 inline mr-2" />
-                  Data Warehousing
+                  24 / 7 Data Reliability
                 </span>
                 <span className="px-4 py-2 text-sm rounded-full bg-slate-800/60 text-slate-200 border border-slate-700/50 backdrop-blur-sm">
                   <BarChart3 className="w-3.5 h-3.5 inline mr-2" />
@@ -193,7 +202,7 @@ const ManagedBI = () => {
                 </span>
                 <span className="px-4 py-2 text-sm rounded-full bg-slate-800/60 text-slate-200 border border-slate-700/50 backdrop-blur-sm">
                   <Settings className="w-3.5 h-3.5 inline mr-2" />
-                  Ongoing Management
+                  Ongoing Management & Support
                 </span>
               </div>
 

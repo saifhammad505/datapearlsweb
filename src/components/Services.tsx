@@ -13,9 +13,9 @@ import {
 const services = [
   {
     icon: Crown,
-    title: "Managed Business Intelligence",
+    title: "Managed Business Intelligence (BI-as-a-Service)",
     description:
-      "Your dedicated BI & analytics function — ensuring leadership always has a clear, trusted view of performance and priorities.",
+      "Your dedicated Business Intelligence department. We manage your data and insights so leadership always operates with clarity, confidence, and control.",
     link: "/services/BiaaS",
     gradient: "from-cyan-500 to-blue-500",
     glow: "cyan",
@@ -25,28 +25,28 @@ const services = [
     icon: BarChart3,
     title: "Decision-Ready Dashboards",
     description:
-      "Purpose-built dashboards designed around leadership decisions — providing immediate clarity on performance, risks, and priorities.",
+      "Executive dashboards engineered around real leadership decisions, delivering instant visibility into performance, risks, trends, and priorities.",
     link: "/services/BIDashboards",
     gradient: "from-violet-500 to-purple-500",
     glow: "violet",
     flagship: false,
   },
   {
-    icon: Database,
-    title: "Data Foundation & Warehousing",
+    icon: TrendingUp,
+    title: "Performance & Operations Analytics",
     description:
-      "A centralized, governed data foundation that ensures every team works from a single, trusted source of truth.",
-    link: "/services/DataEngineering",
+      "In-depth operational and financial analytics to expose inefficiencies, cost leakage, and execution bottlenecks before they impact results.",
+    link: "/services/DataAnalytics",
     gradient: "from-emerald-500 to-teal-500",
     glow: "emerald",
     flagship: false,
   },
   {
-    icon: TrendingUp,
-    title: "Performance & Operations Analytics",
+    icon: Database,
+    title: "Data Foundation & Warehousing",
     description:
-      "Deep operational and financial analysis to uncover inefficiencies, cost leakage, and execution bottlenecks.",
-    link: "/services/DataAnalytics",
+      "A secure, governed data foundation that unifies your systems into a single source of truth - ensuring accuracy, consistency, and scalability.",
+    link: "/services/DataEngineering",
     gradient: "from-amber-500 to-orange-500",
     glow: "amber",
     flagship: false,
@@ -55,13 +55,14 @@ const services = [
     icon: Brain,
     title: "Advanced Decision Intelligence",
     description:
-      "Advanced decision systems that enable proactive planning, risk prevention, and intelligent automation at scale.",
+      "Predictive and AI-driven decision systems that enable proactive planning, risk prevention, and intelligent automation across the organisation.",
     link: "/services/advanced-intelligence",
     gradient: "from-indigo-500 to-blue-500",
     glow: "indigo",
     flagship: false,
   },
 ];
+
 
 
 

@@ -20,7 +20,7 @@ import {
   FileText,
 } from "lucide-react";
 import ConsultationDialog from "@/components/ConsultationDialog";
-import dashboardIllustration from "@/assets/PredictiveAnalysisPage.png";
+import dashboardIllustration from "@/assets/DataAnalysisPage.png";
 
 const AdvancedIntelligence = () => {
   const features = [
